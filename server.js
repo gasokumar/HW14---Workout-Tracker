@@ -1,3 +1,4 @@
+// Server skeleton taken from NOSQL 14 -> Custom Methods
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
@@ -14,8 +15,13 @@ app.use(express.json());
 app.use(express.static("public"));
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/workouttracker",
-  { useNewUrlParser: true }
+  process.env.MONGODB_URI || "mongodb://localhost/workout-tracker",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  }
 );
 
 app.listen(PORT, () => {
