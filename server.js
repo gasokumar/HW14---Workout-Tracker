@@ -24,6 +24,10 @@ mongoose.connect(
   }
 );
 
+// Make route for get /stats
+
+// Make route for get /exercise
+
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
