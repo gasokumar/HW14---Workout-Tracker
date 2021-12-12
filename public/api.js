@@ -1,4 +1,4 @@
-// Multiple functions in API.
+// There are multiple functions defined in const API.
 const API = {
   // This one gets the data from the last workout
   async getLastWorkout() {
@@ -38,7 +38,7 @@ const API = {
 
     return json;
   },
-
+  // Get request that gets workouts in a range.
   async getWorkoutsInRange() {
     const res = await fetch(`/api/workouts/range`);
     const json = await res.json();

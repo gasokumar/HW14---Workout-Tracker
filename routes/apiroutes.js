@@ -1,5 +1,11 @@
 const router = require("express").Router();
-const path = require("path");
-// GET request for
+
+// GET request for /api/workouts
+
+// PUT request for /api/workouts
+
+// POST request for /api/workouts
+
+// GET request for /api/workouts/range
 
 module.exports = router;
