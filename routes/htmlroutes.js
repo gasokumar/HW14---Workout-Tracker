@@ -2,6 +2,7 @@
 // Remember, we're organizing the routes in this router. Later, we export it so that the routes can be used.
 const router = require("express").Router();
 const path = require("path");
+const db = require("../models");
 
 // Will need routes for index.html, exercise.html, and stats.html
 // These will all be GET routes that will serve the static html files.
