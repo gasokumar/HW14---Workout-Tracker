@@ -4,7 +4,7 @@ const db = require("../models");
 // Route paths are found from api.js in public folder
 
 // GET request for /api/workouts
-app.get("/api/workouts", (req, res) => {
+router.get("/api/workouts", (req, res) => {
   db.Workout.find({})
     .then((dbWorkout) => {
       res.json(dbWorkout);
@@ -14,7 +14,7 @@ app.get("/api/workouts", (req, res) => {
     });
 });
 // PUT request for /api/workouts
-app.put("/api/workouts/:id", (req, res) => {
+router.put("/api/workouts/:id", (req, res) => {
   db.Workout.findByIdAndUpdate(req.params.id, {
     $push: {
       exercises: req.body,
@@ -28,7 +28,7 @@ app.put("/api/workouts/:id", (req, res) => {
     });
 });
 // POST request for /api/workouts
-app.post("/api/workouts", (req, res) => {
+router.post("/api/workouts", (req, res) => {
   db.Workout.create(req)
     .then((dbWorkout) => {
       res.json(dbWorkout);
@@ -41,7 +41,7 @@ app.post("/api/workouts", (req, res) => {
     });
 });
 // GET request for /api/workouts/range
-app.get("/api/workouts/range", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
   db.Workout.find({})
     .then((dbUser) => {
       res.json(dbUser);

@@ -6,8 +6,6 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 const htmlRoutes = require("./routes/htmlRoutes.js");
 const apiRoutes = require("./routes/apiroutes.js");
-const db = require("./models");
-//Will need to require model for workouts
 
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
